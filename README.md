@@ -119,7 +119,9 @@ cd time-series-forecasting
 pip install pandas numpy matplotlib statsmodels prophet
 
 # Run script
+
 python forecasting.py
+
 🔮 Possible Extensions
 Use real datasets (stock market, weather, retail sales).
 
