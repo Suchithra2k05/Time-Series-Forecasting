@@ -60,8 +60,11 @@ Dashed gray line → Forecast start
 💡 Key Learnings
 
 How to simulate time-series data for experiments.
+
 How to fit and forecast using ARIMA in statsmodels.
+
 How to use Prophet for trend + seasonality forecasting.
+
 How to visualize and compare multiple forecasting models.
 
 📌 How to Run
@@ -81,6 +84,9 @@ python forecasting.py
 🔮 Next Steps
 
 Use a real-world dataset (e.g., stock prices, energy consumption).
+
 Tune ARIMA parameters (p, d, q) automatically using auto_arima.
+
 Add seasonality & holiday effects in Prophet.
+
 Evaluate forecast accuracy using metrics like MAPE or RMSE.
