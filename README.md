@@ -1,95 +1,116 @@
 # Time-Series-Forecasting
 
 📈 Time-Series Forecasting – ARIMA & Prophet
+This project showcases time-series forecasting using two popular techniques:
 
-This project demonstrates time-series forecasting using two popular approaches:
-ARIMA (AutoRegressive Integrated Moving Average) from statsmodels
-Prophet from Meta (Facebook)
-We forecast simulated monthly sales data and compare results visually.
+ARIMA – A statistical modeling approach for stationary data.
 
-📌 About Time-Series Forecasting
+Prophet – A forecasting tool from Meta (Facebook) designed for capturing trends, seasonality, and holiday effects with minimal tuning.
 
-Time-series forecasting is the process of predicting future values based on previously observed data. It is widely used in:
+The dataset here is simulated monthly sales data for demonstration purposes.
 
-Sales forecasting
+📌 Why Time-Series Forecasting Matters
+Forecasting future values is essential in many industries:
 
-Stock price prediction
+📊 Business & Sales – Demand forecasting, inventory planning
 
-Weather forecasting
+📈 Finance – Stock prices, exchange rates
 
-Demand planning
+🌦 Weather – Temperature, rainfall prediction
 
-Two common approaches used here:
+🏭 Manufacturing – Production scheduling
 
-ARIMA – A statistical model for stationary series.
+🚛 Logistics – Shipment demand estimation
 
-Prophet – A robust model for seasonality, trend, and holiday effects.
+Accurate forecasting helps in strategic decision-making and resource optimization.
 
-📊 Project Overview
-
-Data: Simulated monthly sales (2020–2024)
+📊 Project Summary
+Data: Simulated monthly sales data from Jan 2020 to Dec 2024.
 
 Models Used:
 
-ARIMA (p=2, d=1, q=2)
+ARIMA (2, 1, 2) – Captures autocorrelation and moving averages.
 
-Prophet (automatic seasonality detection)
+Prophet – Handles trend, seasonality, and noise automatically.
 
-Goal: Compare forecasts from ARIMA and Prophet.
+Forecast Horizon: 12 months ahead.
 
-⚙️ Workflow
+Goal: Compare the forecasting styles and outputs of ARIMA vs Prophet.
 
-Data Simulation
+⚙️ Step-by-Step Workflow
 
-Generate 60 months of sales data with trend and noise.
+1. Data Simulation
+Generated 60 months of sales data with:
 
-Data Visualization
+Poisson-distributed base demand
 
-Plot the original sales data.
+Upward trend over time
 
-ARIMA Forecast
+Random noise
 
-Fit ARIMA model (2, 1, 2) on sales data.
-Forecast 12 months ahead.
+2. Data Visualization
+Initial plot to understand the historical trend.
 
-Prophet Forecast
+3. ARIMA Modeling
+ARIMA(p, d, q) = (2, 1, 2)
 
-Format data for Prophet (ds, y format).
+p: Auto-regressive terms
 
-Train model and predict next 12 months.
+d: Differencing to make the series stationary
 
-Comparison Plot
+q: Moving average terms
 
-Plot original data + ARIMA forecast + Prophet forecast.
+Forecasted 12 months into the future.
 
-📊 Sample Output Chart
+4. Prophet Modeling
+Reformatted data to Prophet format (ds = date, y = value).
 
-(Sample visualization – values will vary depending on random seed)
+Prophet automatically detects:
 
-The chart includes:
+Yearly seasonality
 
-Black line → Original sales data
+Trend changes
 
-Red line → ARIMA forecast
+Uncertainty intervals
 
-Blue line → Prophet forecast
+Forecasted the same 12-month horizon.
 
-Dashed gray line → Forecast start
+5. Model Comparison
+Overlaid ARIMA and Prophet forecasts on the same chart.
 
-💡 Key Learnings
+Dashed vertical line marks the start of forecast period.
 
-How to simulate time-series data for experiments.
+📊 Sample Output Visualization
 
-How to fit and forecast using ARIMA in statsmodels.
+The resulting chart shows:
 
-How to use Prophet for trend + seasonality forecasting.
+Black Line → Original Sales Data
 
-How to visualize and compare multiple forecasting models.
+Red Line → ARIMA Forecast
 
-📌 How to Run
-bash
-Copy
-Edit
+Blue Line → Prophet Forecast
+
+Dashed Gray Line → Forecast Start
+
+This visualization helps compare:
+
+How ARIMA tends to follow recent trends closely.
+
+How Prophet smooths forecasts with seasonality/trend adjustments.
+
+
+💡 Key Takeaways
+
+ARIMA is great for short-term forecasting when patterns are stable and well-defined.
+
+Prophet is excellent for longer-term forecasting and when seasonality/trend shifts exist.
+
+Visualization is key to understanding and comparing forecasts.
+
+Data preparation (stationarity, missing values) heavily impacts forecast accuracy.
+
+🛠 How to Run
+
 # Clone repository
 git clone https://github.com/yourusername/time-series-forecasting.git
 cd time-series-forecasting
@@ -97,15 +118,19 @@ cd time-series-forecasting
 # Install dependencies
 pip install pandas numpy matplotlib statsmodels prophet
 
-# Run the script
+# Run script
 python forecasting.py
+🔮 Possible Extensions
+Use real datasets (stock market, weather, retail sales).
 
-🔮 Next Steps
-
-Use a real-world dataset (e.g., stock prices, energy consumption).
-
-Tune ARIMA parameters (p, d, q) automatically using auto_arima.
+Perform ARIMA parameter tuning with pmdarima.auto_arima.
 
 Add seasonality & holiday effects in Prophet.
 
-Evaluate forecast accuracy using metrics like MAPE or RMSE.
+Evaluate accuracy with:
+
+RMSE (Root Mean Squared Error)
+
+MAPE (Mean Absolute Percentage Error)
+
+Deploy as an API for real-time forecasts.
