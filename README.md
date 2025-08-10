@@ -12,17 +12,13 @@ We forecast simulated monthly sales data and compare results visually.
 Time-series forecasting is the process of predicting future values based on previously observed data. It is widely used in:
 
 Sales forecasting
-
 Stock price prediction
-
 Weather forecasting
-
 Demand planning
 
 Two common approaches used here:
 
 ARIMA – A statistical model for stationary series.
-
 Prophet – A robust model for seasonality, trend, and holiday effects.
 
 📊 Project Overview
@@ -32,48 +28,37 @@ Data: Simulated monthly sales (2020–2024)
 Models Used:
 
 ARIMA (p=2, d=1, q=2)
-
 Prophet (automatic seasonality detection)
-
 Goal: Compare forecasts from ARIMA and Prophet.
 
 ⚙️ Workflow
 
 Data Simulation
-
 Generate 60 months of sales data with trend and noise.
 
 Data Visualization
-
 Plot the original sales data.
 
 ARIMA Forecast
-
 Fit ARIMA model (2, 1, 2) on sales data.
-
 Forecast 12 months ahead.
 
 Prophet Forecast
-
 Format data for Prophet (ds, y format).
-
 Train model and predict next 12 months.
 
 Comparison Plot
-
 Plot original data + ARIMA forecast + Prophet forecast.
 
 📊 Sample Output Chart
+
 (Sample visualization – values will vary depending on random seed)
 
 The chart includes:
 
 Black line → Original sales data
-
 Red line → ARIMA forecast
-
 Blue line → Prophet forecast
-
 Dashed gray line → Forecast start
 
 💡 Key Learnings
