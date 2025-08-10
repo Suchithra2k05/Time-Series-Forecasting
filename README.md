@@ -1,12 +1,14 @@
 # Time-Series-Forecasting
 
 📈 Time-Series Forecasting – ARIMA & Prophet
+
 This project demonstrates time-series forecasting using two popular approaches:
 ARIMA (AutoRegressive Integrated Moving Average) from statsmodels
 Prophet from Meta (Facebook)
 We forecast simulated monthly sales data and compare results visually.
 
 📌 About Time-Series Forecasting
+
 Time-series forecasting is the process of predicting future values based on previously observed data. It is widely used in:
 Sales forecasting
 Stock price prediction
@@ -14,10 +16,12 @@ Weather forecasting
 Demand planning
 
 Two common approaches used here:
+
 ARIMA – A statistical model for stationary series.
 Prophet – A robust model for seasonality, trend, and holiday effects.
 
 📊 Project Overview
+
 Data: Simulated monthly sales (2020–2024)
 
 Models Used:
@@ -26,6 +30,7 @@ Prophet (automatic seasonality detection)
 Goal: Compare forecasts from ARIMA and Prophet.
 
 ⚙️ Workflow
+
 Data Simulation
 Generate 60 months of sales data with trend and noise.
 
@@ -53,6 +58,7 @@ Blue line → Prophet forecast
 Dashed gray line → Forecast start
 
 💡 Key Learnings
+
 How to simulate time-series data for experiments.
 How to fit and forecast using ARIMA in statsmodels.
 How to use Prophet for trend + seasonality forecasting.
@@ -73,6 +79,7 @@ pip install pandas numpy matplotlib statsmodels prophet
 python forecasting.py
 
 🔮 Next Steps
+
 Use a real-world dataset (e.g., stock prices, energy consumption).
 Tune ARIMA parameters (p, d, q) automatically using auto_arima.
 Add seasonality & holiday effects in Prophet.
